@@ -1,6 +1,19 @@
+import { useState } from "react";
 import Header from "./Header";
+import FileUpload from "./FileUpload";
 
 export default function Form() {
+  const [fileName, setfileName] = useState("No file Selected");
+
+  const handleChange = (e) => {
+    const file = e.target.files[0];
+    setfileName(file ? file.name : "No file chosen");
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div
       className="  relative 
@@ -28,25 +41,9 @@ export default function Form() {
       <form
         className="flex flex-col mx-auto justify-center items-center z-10 relative"
         action=""
+        onSubmit={handleSubmit}
       >
-        <label className="text-white  mt-4 text-left" htmlFor="uploadAvatar">
-          <span className="relative ">
-            Upload Avatar
-            <img
-              src="/images/icon-upload.svg"
-              className="absolute center bottom-6 left-18 opacity-[40%] border 
-              rounded-sm"
-              alt=""
-            />
-            <input
-              id="uploadAvatar"
-              type="text"
-              className="text-white  border  border-dashed
-               border-blue-300
-               rounded-sm block mt-1 h-20  "
-            />
-          </span>
-        </label>{" "}
+        <FileUpload />
         <label className="text-white text-left mt-4" htmlFor="fullName">
           Full Name
           <input
@@ -77,7 +74,8 @@ export default function Form() {
         <div>
           {" "}
           <button
-            className="border  border-blue-300 mt-4 p-1 rounded-sm bg-red-800"
+            className="text-black border  border-blue-300 mt-4 px-4
+             rounded-sm bg-red-500 font-semibold"
             type="submit"
           >
             Generate Your Ticket

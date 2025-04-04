@@ -23,8 +23,9 @@ export default function Ticket() {
         ticket is ready!
       </h1>
       <p className="mt-4 mb-4">
-        We've emailed your ticket to jonathan@gmail.com and will send updates up
-        to the run in he event soon{" "}
+        We've emailed your ticket to{" "}
+        <span className="text-red-300">jonathan@gmail.com</span> and will send
+        updates up to the run in he event soon{" "}
       </p>
       <Card />
     </div>
