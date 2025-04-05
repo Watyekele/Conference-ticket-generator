@@ -27,6 +27,11 @@ export default function Form() {
         alt=""
       />
       <img
+        src="/images/pattern-lines.svg"
+        className=" absolute z-10 h-screen"
+        alt=""
+      />
+      <img
         src="/images/pattern-squiggly-line-bottom-desktop.svg"
         className="absolute z-0 bottom-4 left-0 w-[60%] h-auto "
         alt=""

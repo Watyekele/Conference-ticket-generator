@@ -3,14 +3,19 @@ import Card from "./Card";
 export default function Ticket() {
   return (
     <div
-      className="mt-8 flex flex-col mx-auto justify-center items-center font-inconsolanta container relative 
+      className="mt-4 flex flex-col mx-auto  items-center font-inconsolanta container relative 
       bg-[url('/images/background-desktop.png')] 
-    bg-cover bg-center w-[70%] min-h-screen p-4 "
+    bg-cover bg-center w-[70%] min-h-screen px-4 py-8 "
     >
       <Header />
       <img
         src="/images/pattern-squiggly-line-top.svg"
         className="absolute z-2 top-4 right-0 w-[30%] h-auto "
+        alt=""
+      />
+      <img
+        src="/images/pattern-lines.svg"
+        className=" absolute z-10 h-screen"
         alt=""
       />
       <img
